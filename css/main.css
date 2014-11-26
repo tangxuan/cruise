@@ -1,7 +1,16 @@
-* {
+*
+{
     box-sizing: border-box;
 }
-h1,h2,h3 {
+body
+{
+    font-family: Helvetica, Helvetica Neue, Arial;
+    font-size: 14px;
+}
+h1,
+h2,
+h3
+{
     margin: 0;
 }
 ul
@@ -12,53 +21,103 @@ ul
     list-style-type: none;
 }
 
-a:visited {
-    color: 
+a:link,
+a:visited,
+a:hover,
+a:active
+{
+    color: black;
 }
 
-ul.nav {
-    overflow: hidden;
+.title
+{
+    font-size: 3em;
+
+    position: absolute;
+    top: 25px;
+}
+
+ul.nav
+{
     position: relative;
     z-index: 1;
+
+    overflow: hidden;
+
+    margin-top: 45px;
 }
 
-ul.nav > li {
+ul.nav > li
+{
     float: right;
+
+    margin-left: 5px;
+    padding: 5px 10px;
+
+    cursor: pointer;
+
     border: 2px solid black;
     border-radius: 10px 10px 0 0;
-    padding: 5px 10px;
-    margin-left: 5px;
-    cursor: pointer;
 }
-    
-ul.nav a {
+
+ul.nav a
+{
     text-decoration: none;
+
+    text-shadow: 0 0 2px rgba(0, 0, 0, .5);
 }
 
-ul.nav > li.selected {
-    background: rgb(80,80,80);
+ul.nav > li.selected
+{
     border-bottom-color: rgb(80,80,80);
-} 
+    background: rgb(80,80,80);
+}
 
-ul.nav > li.selected > a {
-     color: white;
+ul.nav > li.selected > a
+{
+    color: white;
 }
 
 .user-info
 {
     position: absolute;
-    top: 0;
-    right: 5px;
+    top: 10px;
+    right: 10px;
 }
 
-.page {
-    border: 2px solid black;
+.user-info .signed
+{
+    margin-right: 10px;
+}
+
+.user-info .arrow-icon
+{
+    margin-right: 5px;
+}
+
+.page
+{
     position: relative;
     top: -2px;
+
     display: none;
     overflow: hidden;
+
+    border: 2px solid black;
 }
 
-.page.selected {
+.page.selected
+{
     display: block;
+}
+
+.arrow-icon
+{
+    display: inline-block;
+
+    width: 12px;
+    height: 8px;
+
+    background-image: url(../img/arrow.png);
+    background-size: contain;
 }

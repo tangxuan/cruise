@@ -6,10 +6,10 @@
     <title>Cruise</title>
 </head>
 <body ng-controller="mainCtrl">
-    <h1>Cruise</h1>
+    <h1 class="title">Cruise</h1>
     <div class="user-info">
-        <span>Signed in as <a href="">Member</a></span>
-        <a href="">Sign out</a>
+        <span class="signed">Signed in as <a href="">Member</a></span>
+        <a href="" class="sign-out"><span class="arrow-icon"></span>Sign out</a>
     </div>
     <ul class="nav">
         <li ng-repeat="item in navs" ng-class="{ selected: currentNav == item.href}"><a href="" ng-click="navTo(item.href)">{{item.name}}</a></li>
@@ -33,6 +33,7 @@
         <div class="left-panel">
             <c-agent ng-repeat="agent in agents" model="agent"></c-agent>
         </div>
+        <div class="panel-split"></div>
         <div class="right-panel">
             <h3>Summary</h3>
             <div class="summary">
