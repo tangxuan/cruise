@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="cruise">
+<head>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/agent.css">
+    <title>Cruise</title>
+</head>
+<body ng-controller="mainCtrl">
+    <h1>Cruise</h1>
+    <div class="user-info">
+        <span>Signed in as <a href="">Member</a></span>
+        <a href="">Sign out</a>
+    </div>
+    <ul class="nav">
+        <li ng-repeat="item in navs" ng-class="{ selected: currentNav == item.href}"><a href="" ng-click="navTo(item.href)">{{item.name}}</a></li>
+    </ul>
+    <div class="page" ng-class="{selected: currentNav == 'dashboard'}">
+        This is dashboard page.
+    </div>
+    <div class="page" ng-class="{selected: currentNav == 'my-cruise'}">
+        This is my-cruise page.
+    </div>
+    <div class="page" ng-class="{selected: currentNav == 'agents'}" ng-controller="AgentCtrl">
+        <c-specify-pop show="shouldPopShow"></c-specify-pop>    
+        <div class="sub-nav">
+            <h3>Agents</h3>
+            <ul>
+                <li>All</li> 
+                <li class="selected">Physical</li>   
+                <li>Virtual</li>
+            </ul>
+        </div>
+        <div class="left-panel">
+            <c-agent ng-repeat="agent in agents" model="agent"></c-agent>
+        </div>
+        <div class="right-panel">
+            <h3>Summary</h3>
+            <div class="summary">
+                <table>
+                    <tr>
+                        <td style="width: 50%">building</td>
+                        <td style="width: 50%">2</td>
+                    </tr>
+                    <tr>
+                        <td>idle</td>
+                        <td>2</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>History</h3>
+            <div class="history">
+                <ul>
+                    <li ng-repeat="history in historys">{{history}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="page" ng-class="{selected: currentNav == 'help'}">
+        This is help page.
+    </div>
+</body>
+<script src="js/lib/jquery/jquery-1.11.1.js"></script>
+<script src="js/lib/underscore/underscore.js"></script>
+<script src="js/lib/angular/angular.js"></script>
+<script src="js/lib/angular/angular-route.js"></script>
+<script src="js/app/main.js"></script>
+<script src="js/app/agent.js"></script>
+</html>

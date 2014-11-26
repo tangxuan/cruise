@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+h1,h2,h3 {
+    margin: 0;
+}
+ul
+{
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+a:visited {
+    color: 
+}
+
+ul.nav {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+ul.nav > li {
+    float: right;
+    border: 2px solid black;
+    border-radius: 10px 10px 0 0;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+    
+ul.nav a {
+    text-decoration: none;
+}
+
+ul.nav > li.selected {
+    background: rgb(80,80,80);
+    border-bottom-color: rgb(80,80,80);
+} 
+
+ul.nav > li.selected > a {
+     color: white;
+}
+
+.user-info
+{
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+
+.page {
+    border: 2px solid black;
+    position: relative;
+    top: -2px;
+    display: none;
+    overflow: hidden;
+}
+
+.page.selected {
+    display: block;
+}
