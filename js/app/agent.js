@@ -28,7 +28,7 @@ angular.module('cruise').controller('AgentCtrl', ['$scope',
                 ip: '192.168.0.4',
                 path: '/var/lib/cruise-agent',
                 resources: ['ie10', 'core-duo']
-            },];
+            }];
 
             $scope.historys = ['bjljflskflksdfljls02/Acceptance_test', 
                     'bjljflskflksdfljls03/Acceptance_test', 
