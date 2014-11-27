@@ -45,7 +45,6 @@
 
     width: 75%;
     padding: 15px;
-
 }
 
 .panel-split
@@ -186,6 +185,13 @@
     height: 8px;
 
     background-image: url(../img/add.png);
+
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src='img/add.gif',
+    sizingMethod='scale');
+    -ms-filter: 'progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src=\'img/add.gif\',
+    sizingMethod=\'scale\')';
 }
 
 .del-icon
@@ -194,6 +200,13 @@
     height: 12px;
 
     background-image: url(../img/del.png);
+
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src='img/del.png',
+    sizingMethod='scale');
+    -ms-filter: 'progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src=\'img/del.png\',
+    sizingMethod=\'scale\')';
 }
 
 .deny-icon
@@ -202,6 +215,13 @@
     height: 12px;
 
     background-image: url(../img/deny.png);
+
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src='img/deny.png',
+    sizingMethod='scale');
+    -ms-filter: 'progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src=\'img/deny.png\',
+    sizingMethod=\'scale\')';
 }
 .add-icon,
 .del-icon,
