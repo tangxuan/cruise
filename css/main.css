@@ -120,4 +120,10 @@ ul.nav > li.selected > a
 
     background-image: url(../img/arrow.png);
     background-size: contain;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src='img/arrow.png',
+    sizingMethod='scale');
+    -ms-filter: 'progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src=\'img/arrow.png\',
+    sizingMethod=\'scale\')';
 }
